@@ -9,5 +9,41 @@
             "email": "frederickpeal@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "php": ">= 7.4",
+        "ext-phalcon": ">=4",
+        "canvas/core": "^0.3@dev"
+    },
+    "require-dev": {
+        "codeception/codeception": "^4.1",
+        "codeception/module-asserts": "^1.2",
+        "codeception/module-filesystem": "^1.0",
+        "codeception/module-phalcon": "^1.0",
+        "codeception/module-phalcon4": "^1.0",
+        "codeception/module-rest": "^1.2",
+        "codeception/verify": "*",
+        "phalcon/incubator": "4.0.x-dev",
+        "phalcon/incubator-acl": "^1.0.0-alpha.1",
+        "phalcon/incubator-test": "^1.0.0-alpha.1",
+        "baka/baka": "^0.7@dev",
+        "robmorgan/phinx": "^0.12",
+        "fzaninotto/faker": "^1.9",
+        "vlucas/phpdotenv": "^4.1",
+        "odan/phinx-migrations-generator": "^5",
+        "mark-gerarts/auto-mapper-plus": "2.0.0-alpha1",
+        "squizlabs/php_codesniffer": "3.2",
+        "symfony/var-dumper": "^4.3@dev",
+        "phpstan/phpstan": "^0.9.2",
+        "phpunit/phpunit": "^9.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Hengen\\": "src/"
+        }
+    },    
+    "autoload-dev": {
+        "psr-4": {
+            "Hengen\\": "src/"
+        }
+    }
 }

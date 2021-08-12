@@ -38,12 +38,14 @@
     },
     "autoload": {
         "psr-4": {
-            "Hengen\\": "src/"
+            "Hengen\\": "src/",
+            "Hengen\\Tests\\":"tests/"
         }
     },    
     "autoload-dev": {
         "psr-4": {
-            "Hengen\\": "src/"
+            "Hengen\\": "src/",
+            "Hengen\\Tests\\":"tests/"
         }
     }
 }

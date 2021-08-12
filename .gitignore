@@ -1,3 +1,5 @@
 docker-compose.yml
 .env
 vendor/
+phinx.php
+phinx-kanvas.php

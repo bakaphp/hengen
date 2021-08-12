@@ -3,3 +3,4 @@ docker-compose.yml
 vendor/
 phinx.php
 phinx-kanvas.php
+storage/cache/

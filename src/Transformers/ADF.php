@@ -15,25 +15,27 @@ class ADF implements TransformerEngine
 {
     protected array $data;
     protected Model $lead;
+    protected array $options;
+
 
     /**
      * __construct.
      *
      * @param  LeadsInterfaces $leads
+     * @param  array $options
      * @param  Model $args
      *
      * @return void
      */
-    public function __construct(LeadsInterfaces $leads, Model ...$args)
+    public function __construct(LeadsInterfaces $leads, array $options = [], Model ...$args)
     {
-        codecept_debug($args);
-        /*
-            foreach ($args as $arg) {
-                $systemModule = SystemModules::getByModelName(self::class);
-                $this->data[$systemModule->slug] = $args->toArray();
-            }*/
-        // $this->data['lead'] = $lead->toArray();
-        // $this->lead = $leads;
+        foreach ($args as $arg) {
+            $systemModule = SystemModules::getByModelName(self::class);
+            $this->data[$systemModule->slug] = $args->toArray();
+        }
+        $this->data['lead'] = $leads->toArray();
+        $this->lead = $leads;
+        $this->setOption($options);
     }
 
     /**
@@ -41,7 +43,7 @@ class ADF implements TransformerEngine
      */
     public function toFormat() : string
     {
-        return Template::generate('ADF', $this->getData());
+        return Template::generate($this->getOption('template'), ['data' => $this->getData()]);
     }
 
 
@@ -53,5 +55,35 @@ class ADF implements TransformerEngine
     public function getData() : array
     {
         return $this->data;
+    }
+
+
+
+    /**
+     * setOption.
+     *
+     * @return self
+     */
+    public function setOption(array $options) : self
+    {
+        $this->options = $options;
+        return $this;
+    }
+
+
+    /**
+     * getOption.
+     *
+     * @param  string $name
+     *
+     * @return mixed
+     */
+    public function getOption(?string $name = null)
+    {
+        if ($name) {
+            return $this->options[$name];
+        }
+
+        return $options;
     }
 }

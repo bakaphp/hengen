@@ -7,7 +7,7 @@ use Faker\Provider\Internet;
 use Hengen\Tests\Support\Models\Leads;
 use Hengen\Transformers\ADF;
 
-class AdfTransformerTest extends \Codeception\Test\Unit
+class GetDataADFTransformerTest extends \Codeception\Test\Unit
 {
     /**
      * @var \UnitTester
@@ -23,7 +23,7 @@ class AdfTransformerTest extends \Codeception\Test\Unit
     }
 
     // tests
-    public function testTemplateString()
+    public function testGetData()
     {
         $faker = Factory::create();
         $faker->addProvider(new Person($faker));
@@ -38,7 +38,7 @@ class AdfTransformerTest extends \Codeception\Test\Unit
         ];
         $leads = new Leads();
         $leads->saveOrFail($data);
-        $adfTransformer = new ADF($leads, ['template' => 'dealer-content']);
-        $this->assertIsString($adfTransformer->toFormat(), "ADF Trasnformer format isn't a string");
+        $adfTransformer = new ADF($leads);
+        $this->assertIsArray($adfTransformer->getData(), 'Expected an array');
     }
 }

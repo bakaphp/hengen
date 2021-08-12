@@ -4,8 +4,9 @@ namespace Helper;
 
 // here you can define custom actions
 // all public methods declared in helper class will be available in $I
-use Phalcon\Di;
+use Codeception\TestInterface;
 
+use Phalcon\Di;
 use Phalcon\Mvc\Model\Manager as ModelsManager;
 use Phalcon\Mvc\Model\Metadata\Memory;
 
@@ -13,7 +14,7 @@ class Unit extends \Codeception\Module
 {
     protected $diContainer = null;
 
-    public function _before()
+    public function _before(TestInterface $test)
     {
         $this->diContainer = new Di();
         $this->setDi();

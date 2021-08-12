@@ -7,14 +7,18 @@
 use Canvas\Providers\AppProvider;
 use Canvas\Providers\CacheDataProvider;
 use Canvas\Providers\DatabaseProvider;
+use Canvas\Providers\FileSystemProvider;
 use Canvas\Providers\MapperProvider;
 use Canvas\Providers\ModelsCacheProvider;
 use Canvas\Providers\RegistryProvider;
 use Canvas\Providers\UserProvider;
+use Canvas\Providers\ViewProvider;
 use Hengen\Tests\Support\Providers\ConfigProvider;
 
 return [
     ConfigProvider::class,
+    ViewProvider::class,
+    FileSystemProvider::class,
     DatabaseProvider::class,
     RegistryProvider::class,
     AppProvider::class,

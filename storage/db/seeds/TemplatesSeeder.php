@@ -28,9 +28,13 @@ class TemplatesSeeder extends AbstractSeed
                         <email>{{data[\'lead\'][\'email\']}}</email>
                     </contact>
                 </customer>
+                <vehicle>
+                    <vin>{{data[\'vehicles\'][\'vin\']}}</vin>
+                </vehicle>
                 <vendor>
                     <contact>
-                        <name part=\'full\'>Acura of Bellevue</name>
+                        <name part=\'full\'>{{data[\'vendors\'][\'name\']}}</name>
+                        <fullname part=\'full\'>{{data[\'vendors\'][\'full_name\']}}</fullname>
                     </contact>
                 </vendor>
             </prospect>

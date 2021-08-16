@@ -4,7 +4,11 @@ use Faker\Factory;
 use Faker\Provider\en_US\Person;
 use Faker\Provider\en_US\PhoneNumber;
 use Faker\Provider\Internet;
+
 use Hengen\Tests\Support\Models\Leads;
+use Hengen\Tests\Support\Models\Vehicles;
+use Hengen\Tests\Support\Models\Vendors;
+
 use Hengen\Transformers\ADF;
 
 class AdfTransformerTest extends \Codeception\Test\Unit
@@ -36,9 +40,24 @@ class AdfTransformerTest extends \Codeception\Test\Unit
             'email' => $faker->email,
             'phone' => $faker->phoneNumber
         ];
+
+        $dataVehicle = [
+            'vin' => rand(10000, 100000),
+            'make' => 'American Vehicle',
+            'model' => 'V1',
+            'int_color' => 'grey',
+            'ext_color' => 'blue'
+        ];
+
         $leads = new Leads();
         $leads->saveOrFail($data);
-        $adfTransformer = new ADF($leads, ['template' => 'dealer-content']);
+
+        $vehicles = new Vehicles();
+        $vehicles->saveOrFail($dataVehicle);
+
+        $vendors = Vendors::findFirst();
+
+        $adfTransformer = new ADF($leads, ['template' => 'dealer-content'], $vehicles, $vendors);
         $this->assertIsString($adfTransformer->toFormat(), "ADF Trasnformer format isn't a string");
     }
 }

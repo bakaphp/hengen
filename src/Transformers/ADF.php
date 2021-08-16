@@ -30,8 +30,8 @@ class ADF implements TransformerEngine
     public function __construct(LeadsInterfaces $leads, array $options = [], Model ...$args)
     {
         foreach ($args as $arg) {
-            $systemModule = SystemModules::getByModelName(self::class);
-            $this->data[$systemModule->slug] = $args->toArray();
+            $systemModule = SystemModules::getByModelName(get_class($arg));
+            $this->data[$systemModule->slug] = $arg->toArray();
         }
         $this->data['lead'] = $leads->toArray();
         $this->lead = $leads;

@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Hengen\Communicators;
 
 use Canvas\Models\Companies;
+use Hengen\Contracts\Interfaces\CommunicationEngine;
 use Hengen\Contracts\Interfaces\TransformerEngine;
 use Phalcon\Di;
 
@@ -26,7 +27,7 @@ class ADF implements CommunicationEngine
     {
         $mail = Di::getDefault()->get('mail');
 
-        $mail->to($company->getEmail())
+        $mail->to($this->company->user->getEmail())
             ->content($this->transformedLead->toFormat(), 'text/plain')
             ->send();
 

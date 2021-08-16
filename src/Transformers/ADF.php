@@ -57,8 +57,6 @@ class ADF implements TransformerEngine
         return $this->data;
     }
 
-
-
     /**
      * setOption.
      *

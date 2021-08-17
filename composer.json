@@ -1,5 +1,5 @@
 {
-    "name": "mc/hengen",
+    "name": "kanvas/hengen",
     "description": "The package is created for transformer the Lead entity in data for exchange data with other CRM",
     "type": "library",
     "license": "MIT",

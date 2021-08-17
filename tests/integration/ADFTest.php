@@ -33,7 +33,7 @@ class ADFTest extends \Codeception\Test\Unit
 
         $transformer = Hengen::getTransformer('ADF', $lead, ['template' => 'dealer-content'], $vendors, $vehicles);
         $communicator = Hengen::getCommunication($transformer, $companies);
-
+        codecept_debug($transformer->toFormat());
         $confComm = $communicator->send();
 
         $this->assertTrue($confComm);

@@ -15,7 +15,7 @@ use Canvas\Providers\QueueProvider;
 use Canvas\Providers\RegistryProvider;
 use Canvas\Providers\UserProvider;
 use Canvas\Providers\ViewProvider;
-use Hengen\Tests\Support\Providers\ConfigProvider;
+use Kanvas\Hengen\Tests\Support\Providers\ConfigProvider;
 
 return [
     ConfigProvider::class,

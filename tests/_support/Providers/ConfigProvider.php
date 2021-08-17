@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Hengen\Tests\Support\Providers;
+namespace Kanvas\Hengen\Tests\Support\Providers;
 
 use function Baka\appPath;
 use Phalcon\Config;

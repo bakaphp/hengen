@@ -15,9 +15,9 @@ if (!defined('ROOT_DIR')) {
 //load classes
 $loader = new Loader();
 $loader->registerNamespaces([
-    'Hengen' => appPath('src/'),
-    'Hengen\Tests' => appPath('tests/'),
-    'Hengen\Tests\Support' => appPath('tests/_support'),
+    'Kanvas\Hengen' => appPath('src/'),
+    'Kanvas\Hengen\Tests' => appPath('tests/'),
+    'Kanvas\Hengen\Tests\Support' => appPath('tests/_support'),
     'Baka\Database' => appPath('vendor/baka/baka/src/database'),
 ]);
 

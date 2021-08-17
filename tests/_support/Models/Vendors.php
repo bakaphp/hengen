@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Hengen\Tests\Support\Models;
+namespace Kanvas\Hengen\Tests\Support\Models;
 
 use Baka\Database\Model;
 

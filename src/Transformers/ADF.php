@@ -3,13 +3,13 @@
 
 declare(strict_types=1);
 
-namespace Hengen\Transformers;
+namespace Kanvas\Hengen\Transformers;
 
 use Baka\Database\Model;
 use Canvas\Models\SystemModules;
 use Canvas\Template;
-use Hengen\Contracts\Interfaces\LeadsInterfaces;
-use Hengen\Contracts\Interfaces\TransformerEngine;
+use Kanvas\Hengen\Contracts\Interfaces\LeadsInterfaces;
+use Kanvas\Hengen\Contracts\Interfaces\TransformerEngine;
 
 class ADF implements TransformerEngine
 {

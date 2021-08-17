@@ -5,11 +5,11 @@ use Faker\Provider\en_US\Person;
 use Faker\Provider\en_US\PhoneNumber;
 use Faker\Provider\Internet;
 
-use Hengen\Tests\Support\Models\Leads;
-use Hengen\Tests\Support\Models\Vehicles;
-use Hengen\Tests\Support\Models\Vendors;
+use Kanvas\Hengen\Tests\Support\Models\Leads;
+use Kanvas\Hengen\Tests\Support\Models\Vehicles;
+use Kanvas\Hengen\Tests\Support\Models\Vendors;
 
-use Hengen\Transformers\ADF;
+use Kanvas\Hengen\Transformers\ADF;
 
 class AdfTransformerTest extends \Codeception\Test\Unit
 {

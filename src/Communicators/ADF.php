@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Hengen\Communicators;
+namespace Kanvas\Hengen\Communicators;
 
 use Canvas\Models\Companies;
-use Hengen\Contracts\Interfaces\CommunicationEngine;
-use Hengen\Contracts\Interfaces\TransformerEngine;
+use Kanvas\Hengen\Contracts\Interfaces\CommunicationEngine;
+use Kanvas\Hengen\Contracts\Interfaces\TransformerEngine;
 use Phalcon\Di;
 
 class ADF implements CommunicationEngine

@@ -1,13 +1,13 @@
 <?php
 
-namespace Hengen;
+namespace Kanvas\Hengen;
 
 use Baka\Database\Model;
 use Canvas\Models\Companies;
-use Hengen\Communicators\ADF as ADFCommunicator;
-use Hengen\Contracts\Interfaces\LeadsInterfaces;
-use Hengen\Contracts\Interfaces\TransformerEngine;
-use Hengen\Transformers\ADF;
+use Kanvas\Hengen\Communicators\ADF as ADFCommunicator;
+use Kanvas\Hengen\Contracts\Interfaces\LeadsInterfaces;
+use Kanvas\Hengen\Contracts\Interfaces\TransformerEngine;
+use Kanvas\Hengen\Transformers\ADF;
 
 class Hengen
 {

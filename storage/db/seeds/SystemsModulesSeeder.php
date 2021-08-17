@@ -19,7 +19,7 @@ class SystemsModulesSeeder extends AbstractSeed
             [
                 'name' => 'Vehicles',
                 'slug' => 'vehicles',
-                'model_name' => 'Hengen\Tests\Support\Models\Vehicles',
+                'model_name' => 'Kanvas\Hengen\Tests\Support\Models\Vehicles',
                 'apps_id' => 1,
                 'parents_id' => 0,
                 'created_at' => date('Y-m-d H:i:s')
@@ -27,7 +27,7 @@ class SystemsModulesSeeder extends AbstractSeed
             [
                 'name' => 'Vendors',
                 'slug' => 'vendors',
-                'model_name' => 'Hengen\Tests\Support\Models\Vendors',
+                'model_name' => 'Kanvas\Hengen\Tests\Support\Models\Vendors',
                 'apps_id' => 1,
                 'parents_id' => 0,
                 'created_at' => date('Y-m-d H:i:s')

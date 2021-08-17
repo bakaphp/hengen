@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Hengen\Contracts\Interfaces;
+namespace Kanvas\Hengen\Contracts\Interfaces;
 
 interface LeadsInterfaces
 {

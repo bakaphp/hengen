@@ -2,10 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Hengen\Communicators;
+namespace Kanvas\Hengen\Communicators;
 
 use Canvas\Models\Companies;
-use Hengen\Contracts\Interfaces\TransformerEngine;
+use Kanvas\Hengen\Contracts\Interfaces\CommunicationEngine;
+use Kanvas\Hengen\Contracts\Interfaces\TransformerEngine;
 use Phalcon\Di;
 
 class ADF implements CommunicationEngine
@@ -26,9 +27,9 @@ class ADF implements CommunicationEngine
     {
         $mail = Di::getDefault()->get('mail');
 
-        $mail->to($company->getEmail())
+        $mail->to($this->company->user->getEmail())
             ->content($this->transformedLead->toFormat(), 'text/plain')
-            ->send();
+            ->sendNow();
 
         //save reference to leads_lead_source
 

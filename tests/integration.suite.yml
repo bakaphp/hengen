@@ -1,0 +1,5 @@
+actor: IntegrationTester
+modules:
+    enabled:
+        - \Helper\Integration
+        - Asserts

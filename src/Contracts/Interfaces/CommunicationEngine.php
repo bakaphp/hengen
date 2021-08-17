@@ -1,6 +1,6 @@
 <?php
 
-namespace Hengen\Contracts\Interfaces;
+namespace Kanvas\Hengen\Contracts\Interfaces;
 
 interface CommunicationEngine
 {

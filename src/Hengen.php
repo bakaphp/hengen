@@ -1,16 +1,27 @@
 <?php
 
-namespace Hengen;
+namespace Kanvas\Hengen;
 
 use Baka\Database\Model;
-use Hengen\Communicators\ADF as ADFCommunicator;
-use Hengen\Contracts\Interfaces\LeadsInterfaces;
-use Hengen\Contracts\Interfaces\TransformerEngine;
-use Hengen\Transformers\ADF;
+use Canvas\Models\Companies;
+use Kanvas\Hengen\Communicators\ADF as ADFCommunicator;
+use Kanvas\Hengen\Contracts\Interfaces\LeadsInterfaces;
+use Kanvas\Hengen\Contracts\Interfaces\TransformerEngine;
+use Kanvas\Hengen\Transformers\ADF;
 
 class Hengen
 {
-    public static function getTransformer(string $type, LeadsInterfaces $leads, Model ...$args)
+    /**
+     * getTransformer.
+     *
+     * @param  string $type
+     * @param  LeadsInterfaces $leads
+     * @param  array $options
+     * @param  Model $args
+     *
+     * @return void
+     */
+    public static function getTransformer(string $type, LeadsInterfaces $leads, array $options = [], Model ...$args)
     {
         /**
          * doesn't necessary has to be a switch , we can get it from the DB better so we don't have to hard code
@@ -18,7 +29,7 @@ class Hengen
          **/
         switch ($type) {
             case 'ADF':
-                    return new ADF($leads, $args);
+                    return new ADF($leads, $options, ...$args);
                 break;
         }
     }
@@ -26,7 +37,8 @@ class Hengen
     /**
      * getCommunication.
      *
-     * @param  string $type
+     * @param  TransformerEngine $transformer
+     * @param  Companies $companies
      *
      * @return void
      */

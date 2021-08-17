@@ -1,5 +1,5 @@
 {
-    "name": "mc/hengen",
+    "name": "kanvas/hengen",
     "description": "The package is created for transformer the Lead entity in data for exchange data with other CRM",
     "type": "library",
     "license": "MIT",
@@ -38,12 +38,16 @@
     },
     "autoload": {
         "psr-4": {
-            "Hengen\\": "src/"
+            "Kanvas\\Hengen\\": "src/",
+            "Kanvas\\Hengen\\Tests\\":"tests/",
+            "Kanvas\\Hengen\\Tests\\Support\\":"tests/_support"
         }
     },    
     "autoload-dev": {
         "psr-4": {
-            "Hengen\\": "src/"
+            "Kanvas\\Hengen\\": "src/",
+            "Kanvas\\Hengen\\Tests\\":"tests/",
+            "Kanvas\\Hengen\\Tests\\Support\\":"tests/_support"
         }
     }
 }

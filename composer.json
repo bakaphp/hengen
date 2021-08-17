@@ -40,14 +40,14 @@
         "psr-4": {
             "Hengen\\": "src/",
             "Hengen\\Tests\\":"tests/",
-            "Hengen\\Tests\\Support":"tests/_support"
+            "Hengen\\Tests\\Support\\":"tests/_support"
         }
     },    
     "autoload-dev": {
         "psr-4": {
             "Hengen\\": "src/",
             "Hengen\\Tests\\":"tests/",
-            "Hengen\\Tests\\Support":"tests/_support"
+            "Hengen\\Tests\\Support\\":"tests/_support"
         }
     }
 }

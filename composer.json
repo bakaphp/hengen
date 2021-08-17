@@ -38,16 +38,16 @@
     },
     "autoload": {
         "psr-4": {
-            "Hengen\\": "src/",
-            "Hengen\\Tests\\":"tests/",
-            "Hengen\\Tests\\Support\\":"tests/_support"
+            "Kanvas\\Hengen\\": "src/",
+            "Kanvas\\Hengen\\Tests\\":"tests/",
+            "Kanvas\\Hengen\\Tests\\Support\\":"tests/_support"
         }
     },    
     "autoload-dev": {
         "psr-4": {
-            "Hengen\\": "src/",
-            "Hengen\\Tests\\":"tests/",
-            "Hengen\\Tests\\Support\\":"tests/_support"
+            "Kanvas\\Hengen\\": "src/",
+            "Kanvas\\Hengen\\Tests\\":"tests/",
+            "Kanvas\\Hengen\\Tests\\Support\\":"tests/_support"
         }
     }
 }

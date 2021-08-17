@@ -148,4 +148,4 @@ jobs:
       
       - name: Run test suites
         if: success()
-        run: vendor/bin/codecept run
+        run: vendor/bin/codecept run --debug

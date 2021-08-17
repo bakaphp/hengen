@@ -11,6 +11,16 @@ use Hengen\Transformers\ADF;
 
 class Hengen
 {
+    /**
+     * getTransformer.
+     *
+     * @param  string $type
+     * @param  LeadsInterfaces $leads
+     * @param  array $options
+     * @param  Model $args
+     *
+     * @return void
+     */
     public static function getTransformer(string $type, LeadsInterfaces $leads, array $options = [], Model ...$args)
     {
         /**
@@ -27,7 +37,8 @@ class Hengen
     /**
      * getCommunication.
      *
-     * @param  string $type
+     * @param  TransformerEngine $transformer
+     * @param  Companies $companies
      *
      * @return void
      */

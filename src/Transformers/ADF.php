@@ -14,7 +14,7 @@ use Hengen\Contracts\Interfaces\TransformerEngine;
 class ADF implements TransformerEngine
 {
     protected array $data;
-    protected Model $lead;
+    protected LeadsInterfaces $lead;
     protected array $options;
 
 

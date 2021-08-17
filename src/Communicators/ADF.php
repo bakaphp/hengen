@@ -29,7 +29,7 @@ class ADF implements CommunicationEngine
 
         $mail->to($this->company->user->getEmail())
             ->content($this->transformedLead->toFormat(), 'text/plain')
-            ->send();
+            ->sendNow();
 
         //save reference to leads_lead_source
 

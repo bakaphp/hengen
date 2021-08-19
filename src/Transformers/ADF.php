@@ -76,7 +76,7 @@ class ADF implements TransformerEngine
      *
      * @return mixed
      */
-    public function getOption(?string $name = null) : array
+    public function getOption(?string $name = null)
     {
         if ($name) {
             return $this->options[$name];

@@ -26,8 +26,9 @@ class ADF implements CommunicationEngine
     public function send() : bool
     {
         $mail = Di::getDefault()->get('mail');
-
-        $mail->to($this->company->user->getEmail())
+        $config = Di::getDefault()->get('config');
+        $email = $config->app->production ? $this->company->user->getEmail() : $config->app->emailDev;
+        $mail->to($email)
             ->content($this->transformedLead->toFormat(), 'text/plain')
             ->sendNow();
 

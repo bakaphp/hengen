@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 namespace Kanvas\Hengen;
 
@@ -15,10 +16,10 @@ class Hengen
     /**
      * getTransformer.
      *
-     * @param  string $type
-     * @param  LeadsInterfaces $leads
-     * @param  array $options
-     * @param  Model $args
+     * @param string $type
+     * @param LeadsInterfaces $leads
+     * @param array $options
+     * @param Model $args
      *
      * @return void
      */
@@ -30,7 +31,7 @@ class Hengen
          **/
         switch ($type) {
             case 'ADF':
-                    return new ADF($leads, $options, ...$args);
+                return new ADF($leads, $options, ...$args);
                 break;
         }
     }
@@ -38,8 +39,8 @@ class Hengen
     /**
      * getCommunication.
      *
-     * @param  TransformerEngine $transformer
-     * @param  Companies $companies
+     * @param TransformerEngine $transformer
+     * @param Companies $companies
      *
      * @return void
      */
